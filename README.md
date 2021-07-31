@@ -1,4 +1,4 @@
-#Interswitch Employee Leave Management System
+# Interswitch Employee Leave Management System
 ## Installion
 ### Requirements
 This system has been developed using Java Spring Boot, there for; Running it requires one to

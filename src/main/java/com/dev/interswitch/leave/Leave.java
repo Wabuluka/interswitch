@@ -2,6 +2,7 @@ package com.dev.interswitch.leave;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 @Entity
 @Table
@@ -20,25 +21,25 @@ public class Leave {
     private Long user;
     private LocalDate startdate;
     private LocalDate endtime;
+
+    @Transient
     private int period;
     private boolean status;
 
     public Leave(){}
 
-    public Leave(Long id, Long user, LocalDate startdate, LocalDate endtime, int period, boolean status) {
+    public Leave(Long id, Long user, LocalDate startdate, LocalDate endtime, boolean status) {
         this.id = id;
         this.user = user;
         this.startdate = startdate;
         this.endtime = endtime;
-        this.period = period;
         this.status = status;
     }
 
-    public Leave(Long user, LocalDate startdate, LocalDate endtime, int period, boolean status) {
+    public Leave(Long user, LocalDate startdate, LocalDate endtime, boolean status) {
         this.user = user;
         this.startdate = startdate;
         this.endtime = endtime;
-        this.period = period;
         this.status = status;
     }
 
@@ -59,7 +60,7 @@ public class Leave {
     }
 
     public int getPeriod() {
-        return period;
+        return Period.between(this.startdate, LocalDate.now()).getYears();
     }
 
     public boolean isStatus() {

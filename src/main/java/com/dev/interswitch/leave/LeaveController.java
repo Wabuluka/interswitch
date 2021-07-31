@@ -1,9 +1,7 @@
 package com.dev.interswitch.leave;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,11 @@ public class LeaveController {
     @GetMapping
     public List<Leave> getLeaves(){
         return leaveService.getLeaves();
+    }
+
+    @PostMapping
+    public void reqisterNewLeave(@RequestBody Leave leave){
+        leaveService.addNewLeave(leave);
     }
 
 }

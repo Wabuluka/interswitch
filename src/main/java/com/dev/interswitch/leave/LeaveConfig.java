@@ -16,16 +16,14 @@ public class LeaveConfig {
         return args -> {
             Leave user1 = new Leave(
                     1L,
-                    LocalDate.of(2000, 02, 5),
+                    LocalDate.of(2009, 02, 5),
                     LocalDate.of(2000, 03, 5),
-                    1,
                     true
             );
             Leave user2 = new Leave(
                     1L,
-                    LocalDate.of(2000, 05, 5),
+                    LocalDate.of(2006, 05, 5),
                     LocalDate.of(2000, 07, 5),
-                    1,
                     true
             );
 

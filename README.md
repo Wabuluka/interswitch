@@ -21,11 +21,9 @@ It further inserts some demo data for the two database tables user and leave res
 ### Testing
 Testing of this application can best be achieved using Post Man or any similar client <br>
 * To see the list of leaves created by the system<br>
-http://localhost:8080/api/v1/leave - Method {GET} <br>
+> http://localhost:8080/api/v1/leave - Method {GET} <br>
 * To create a leave for an employee <br>
  > http://localhost:8080/api/v1/leave - Method {POST} <br>
-* To get all leaves created by the system <br>
-> http://localhost:8080/api/v1/leave - Method {GET} <br>
   
 ### Others
 Due to time limit, I have also included a class for users that simply creates 2 demo users.

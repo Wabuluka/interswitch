@@ -23,11 +23,26 @@ Testing of this application can best be achieved using Post Man or any similar c
 * To see the list of leaves created by the system<br>
 http://localhost:8080/api/v1/leave - Method {GET} <br>
 * To create a leave for an employee <br>
-  http://localhost:8080/api/v1/leave - Method {POST} <br>
+ > http://localhost:8080/api/v1/leave - Method {POST} <br>
+* To get all leaves created by the system <br>
+> http://localhost:8080/api/v1/leave - Method {GET} <br>
+  
+### Others
+Due to time limit, I have also included a class for users that simply creates 2 demo users.
+> http://localhost:8080/api/v1/user - Method {GET} <br>
+
+With this link you can have a look at the users created by the system.
+  
+### Areas to look at in the next update
+Should there be an update to this software, database relationships shall be included through more advanced
+JPA, TDD shall be implemented, validation shall also be added.
 
 ***
 **Warning!**
 
 Please note that this is a beta version of the application so there may be irregularities in 
-how it operates, sometimes it may crush without warning or may simply refuse to work due 
+how it operates, sometimes it may crush without warning or may simply refuse to work due to
 several changes the developer may have made. 
+
+Regards
+> Davies Wabulukka
